@@ -24,4 +24,7 @@ interface SessionDatabaseDao {
 
     @Query("SELECT * FROM productive_session_table ORDER BY sessionId DESC LIMIT 1")
     fun getMostRecentSession(): ProductiveSession?
+
+    @Query("DELETE FROM productive_session_table WHERE sessionId = :key")
+    fun removeSession(key: Long)
 }
