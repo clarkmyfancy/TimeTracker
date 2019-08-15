@@ -8,7 +8,7 @@ import com.example.productivitytracker.database.SessionDatabaseDao
 class TimeTrackerViewModelFactory (
         private val dataSource: SessionDatabaseDao,
         private val application: Application) : ViewModelProvider.Factory {
-    
+
     override fun <T : ViewModel?> create(modelClass: Class<T>): T {
         if (modelClass.isAssignableFrom(TimeTrackerViewModel::class.java)) {
             return TimeTrackerViewModel(dataSource, application) as T
