@@ -11,8 +11,6 @@ import com.example.productivitytracker.databinding.FragmentTimeTrackerBinding
 
 class TimeTrackerFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-//        return super.onCreateView(inflater, container, savedInstanceState)
-
         val binding: FragmentTimeTrackerBinding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_time_tracker, container, false)
 
