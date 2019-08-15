@@ -1,7 +1,6 @@
 package com.example.productivitytracker.database
 
 import android.content.Context
-import android.se.omapi.Session
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
