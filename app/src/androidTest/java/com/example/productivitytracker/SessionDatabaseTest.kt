@@ -11,7 +11,6 @@ import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 import java.io.IOException
-import java.lang.Exception
 
 @RunWith(AndroidJUnit4::class)
 class SessionDatabaseTest : junit.framework.TestCase(){
@@ -43,5 +42,22 @@ class SessionDatabaseTest : junit.framework.TestCase(){
         sessionDao.insert(sesh)
         val currentSesh = sessionDao.getMostRecentSession()
         assertEquals(currentSesh?.description, "")
+        assertEquals(true, true)
+    }
+
+    @Test
+    @Throws(Exception::class)
+    fun getAndDeleteSession() {
+        // Arrange
+        val sesh = ProductiveSession()
+        sessionDao.insert(sesh)
+        val newSesh = sessionDao.getMostRecentSession()
+
+        // Act
+        sessionDao.removeSession(newSesh!!.sessionId)
+
+        // Assert
+        val checkSesh = sessionDao.getMostRecentSession()
+        assertNotSame(newSesh, checkSesh)
     }
 }
