@@ -2,7 +2,7 @@ package com.example.productivitytracker
 
 import androidx.room.Room
 import androidx.test.platform.app.InstrumentationRegistry
-import androidx.test.runner.AndroidJUnit4
+import androidx.test.ext.junit.runners.AndroidJUnit4
 import com.example.productivitytracker.database.ProductiveSession
 import com.example.productivitytracker.database.SessionDatabase
 import com.example.productivitytracker.database.SessionDatabaseDao
