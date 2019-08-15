@@ -42,7 +42,6 @@ class SessionDatabaseTest : junit.framework.TestCase(){
         sessionDao.insert(sesh)
         val currentSesh = sessionDao.getMostRecentSession()
         assertEquals(currentSesh?.description, "")
-        assertEquals(true, true)
     }
 
     @Test
